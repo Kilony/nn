@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Заклинания</title>
+</head>
+
+<body class="container">
+    <div id="menu-container"></div>
+    <script src="menu.js"></script>
+
+    <section>
+        <h2>Заклинания</h2>
+
+        <!-- Фильтр по классам -->
+        <label for="classFilter">Фильтр</label>
+        <select id="classFilter" onchange="filterSpells()">
+            <option >Выбор класса</option>
+            <option value="wizard">Волшебник</option>
+            <option value="bard">Бард</option>
+            <option value="cleric">Жрец</option>
+            <option value="cleric">Паладин</option>
+            <option value="druid">Друид</option>
+            <option value="sorcerer">Чародей</option>
+        </select>
+		
+		<label for="levelFilter">Фильтр по кругам:</label>
+		<select id="levelFilter" onchange="filterSpells()">
+			<option value="all">Все круги</option>
+			<option value="0">Круг 0</option>
+			<option value="1">Круг 1</option>
+			<option value="2">Круг 2</option>
+			</select>
+
+        <div id="spellContainer" class="spell-level">
+            <!-- Здесь будут отображаться заклинания -->
+        </div>
+        
+    </section>
+<p align = center><a href="#top">Наверх</a></p>
+    <footer>
+        <p>&copy; 2023 Pathfinder Adventure Справочник</p>
+    </footer>
+    <script src="spells.js"></script>
+</body>
+
+</html>

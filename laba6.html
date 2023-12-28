@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Капча</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        #captchaContainer {
+            font-size: 36px;
+            user-select: none; /* Запрет выделения текста */
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 4px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #333;
+			font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        #captchaInput {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        #buttonContainer {
+            display: flex;
+            gap: 10px;
+        }
+
+        #refreshCaptcha,
+        #checkCaptcha {
+            cursor: pointer;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="captchaContainer"></div>
+<input type="text" id="captchaInput" placeholder="Введите символы с изображения">
+<div id="buttonContainer">
+    <button id="refreshCaptcha" onclick="generateCaptcha()">🔄 Новая капча</button>
+    <button id="checkCaptcha" onclick="checkCaptcha()">✔️ Проверить капчу</button>
+</div>
+
+<script src="laba6.js"></script>
+
+</body>
+</html>

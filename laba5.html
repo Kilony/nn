@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body class="container">
+    <div id="menu-container"></div>
+    <script type="text/javascript" charset="utf-8" src="menu.js"></script>
+
+    <section id="content">
+        <h2>Расчёт опыта</h2>
+        <table>
+            <tr>
+                <td>Уровень персонажа:</td>
+                <td>
+                    <input type="number" id="characterLevel" min="1" value="1">
+                </td>
+            </tr>
+            <tr>
+                <td>Класс опасности противника:</td>
+                <td>
+                    <select id="enemyDanger">
+                        <option value="1">Низкий (x0.5)</option>
+                        <option value="2">Средний (x1)</option>
+                        <option value="3">Высокий (x2)</option>
+                        <option value="4">Смертельный (x4)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Опыт за победу:</td>
+                <td id="experience"></td>
+            </tr>
+        </table>
+        <button onclick="calculateExperience()">Рассчитать опыт</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Pathfinder Adventure Справочник</p>
+    </footer>
+    <script type="text/javascript" charset="utf-8" src="laba5.js"></script>
+</body>
+</html>

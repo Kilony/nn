@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .character-sheet {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .character-details,
+        .character-attributes {
+            flex: 1;
+        }
+
+        .character-image-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .character-image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .character-details,
+        .character-attributes {
+            margin: 0 20px;
+        }
+
+        .character-details label,
+        .character-attributes label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .character-details select,
+        .character-attributes div {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body class="container">
+    <div id="menu-container"></div>
+    <script type="text/javascript" charset="utf-8" src="menu.js"></script>
+
+    <section id="content">
+        <h2>Лист персонажа</h2>
+        <div class="character-sheet">
+            <div class="character-details">
+                <label for="race">Раса:</label>
+                <select disabled id="race"></select>
+
+                <label for="class">Класс:</label>
+                <select disabled id="class"></select>
+            </div>
+
+            <div class="character-image-container">
+                <img id="class-image" src="" alt="Изображение класса">
+            </div>
+
+            <div class="character-attributes">
+                <label for="strength">Сила:</label>
+                <div id="strength"></div>
+
+                <label for="dexterity">Ловкость:</label>
+                <div id="dexterity"></div>
+
+                <label for="constitution">Телосложение:</label>
+                <div id="constitution"></div>
+
+                <label for="intelligence">Интеллект:</label>
+                <div id="intelligence"></div>
+
+                <label for="wisdom">Мудрость:</label>
+                <div id="wisdom"></div>
+
+                <label for="charisma">Харизма:</label>
+                <div id="charisma"></div>
+            </div>
+        </div>
+
+        <button onclick="randomizeCharacteristics()">Рандомизировать</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Pathfinder Adventure Справочник</p>
+    </footer>
+    <script type="text/javascript" charset="utf-8" src="characterSheet.js"></script>
+</body>
+</html>

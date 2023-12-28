@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ товара - Настольные игры</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container">
+    <div id="menu-container"></div>
+    <script type="text/javascript" charset="utf-8" src="menu.js"></script>
+
+    <section id="content">
+        <h2>Форма заказа товара</h2>
+        <form action="laba10.php" method="post">
+            <p><label for="product">Выберите настольную игру:</label>
+            <select name="product" id="product" required>
+                <option value="game1">Название игры 1</option>
+                <option value="game2">Название игры 2</option>
+                <!-- Добавьте остальные варианты настольных игр -->
+            </select></p>
+
+            <p><label for="quantity">Количество:</label>
+            <input type="number" name="quantity" id="quantity" min="1" required></p>
+
+            <p><label for="name">Ваше имя:</label>
+            <input type="text" name="name" id="name" required></p>
+
+            <p><label for="email">Ваш Email:</label>
+            <input type="email" name="email" id="email" required></p>
+
+            <p><button type="submit">Заказать</button></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Pathfinder Adventure Справочник</p>
+    </footer>
+</body>
+</html>
